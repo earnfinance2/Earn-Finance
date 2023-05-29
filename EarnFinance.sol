@@ -2,15 +2,15 @@ pragma solidity 0.8.19;
 
 // SPDX-License-Identifier: MIT
 
-import "./Context.sol";
-import "./Ownable.sol";
-import "./IBEP20.sol";
-import "./SafeMath.sol";
-import "./Address.sol";
-import "./IUniswapV2Factory.sol";
-import "./IUniswapV2Pair.sol";
-import "./IUniswapV2Router02.sol";
-import "./IContract.sol";
+import "https://github.com/earnfinance2/Earn-Finance/blob/main/Context.sol";
+import "https://github.com/earnfinance2/Earn-Finance/blob/main/Ownable.sol";
+import "https://github.com/earnfinance2/Earn-Finance/blob/main/IBEP20.sol";
+import "https://github.com/earnfinance2/Earn-Finance/blob/main/SafeMath.sol";
+import "https://github.com/earnfinance2/Earn-Finance/blob/main/Address.sol";
+import "https://github.com/earnfinance2/Earn-Finance/blob/main/IUniswapV2Factory.sol";
+import "https://github.com/earnfinance2/Earn-Finance/blob/main/IUniswapV2Pair.sol";
+import "https://github.com/earnfinance2/Earn-Finance/blob/main/IUniswapV2Router02.sol";
+import "https://github.com/earnfinance2/Earn-Finance/blob/main/IContract.sol";
 
 contract EarnFinance is Context, IBEP20, Ownable {
     using SafeMath for uint256;
