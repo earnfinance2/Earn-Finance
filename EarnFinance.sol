@@ -98,12 +98,10 @@ contract EarnFinance is Context, IBEP20, Ownable {
             .createPair(address(this), _uniswapV2Router.WETH());
             
         uniswapV2Router = _uniswapV2Router;
-        _reflectionBalance[marketingAddress] = _reflectionTotal;
         
         //@dev Exclude addresses from fees
         isExcludedFromFee[_msgSender()] = true;
         isExcludedFromFee[address(this)] = true;
-        isExcludedFromFee[marketingAddress] = true;
         
         //@dev adding the pair
         addRemovePair(uniswapV2Pair, true);
@@ -113,7 +111,6 @@ contract EarnFinance is Context, IBEP20, Ownable {
         _excluded.push(uniswapV2Pair);
 
         isThisContractCanTransfer[address(this)] = true;
-		marketingAddress = rewards;
         
         _reflectionBalance[_msgSender()] = _reflectionTotal;
         emit Transfer(address(0), _msgSender(), _tokenTotal);
